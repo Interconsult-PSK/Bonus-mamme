@@ -1,0 +1,451 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="alternate" hreflang="de" href="bonus-mamme-2026-de.html">
+<link rel="alternate" hreflang="it" href="bonus-mamme-2026-it.html">
+<title>Schema di verifica Bonus mamme</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Public+Sans:wght@400;500;600;700&display=swap">
+<style>
+/* Layout: Arbeitsblatt in zwei Spalten. Links die Prüfschritte 1 bis 4, rechts das mitlaufende Ergebnis. Darunter Antrag und Rechtsgrundlagen. */
+:root{
+  --bg:#F2F4F8;--surface:#FFFFFF;--fg:#14213D;--muted:#566079;--line:#D3D9E5;
+  --accent:#1F4FB4;--accent-ink:#FFFFFF;--accent-tint:#E3EBFA;
+  --ok:#17744A;--ok-tint:#DFF2E7;--stop:#B3261E;--stop-tint:#FBE5E3;--warn:#85560A;--warn-tint:#FFEFC8;
+  --f-body:'Public Sans',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;
+  --f-mono:'IBM Plex Mono',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0E1424;--surface:#161E33;--fg:#E6EAF4;--muted:#9AA5C0;--line:#2A3552;
+  --accent:#8BAEFF;--accent-ink:#0E1424;--accent-tint:#1B2A52;
+  --ok:#62D69C;--ok-tint:#14352A;--stop:#FF8F86;--stop-tint:#3D1B1A;--warn:#F2C25B;--warn-tint:#3A2E10;color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0E1424;--surface:#161E33;--fg:#E6EAF4;--muted:#9AA5C0;--line:#2A3552;
+  --accent:#8BAEFF;--accent-ink:#0E1424;--accent-tint:#1B2A52;
+  --ok:#62D69C;--ok-tint:#14352A;--stop:#FF8F86;--stop-tint:#3D1B1A;--warn:#F2C25B;--warn-tint:#3A2E10;color-scheme:dark}
+
+*{box-sizing:border-box}
+body{margin:0}
+[hidden]{display:none!important}
+body{background:var(--bg);color:var(--fg);font-family:var(--f-body);font-size:15px;line-height:1.55;
+  padding-block:24px 48px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.wrap{max-width:1060px;margin:0 auto;display:flex;flex-direction:column;gap:20px}
+h1,h2,h3{text-wrap:balance;margin:0;line-height:1.2}
+h1{font-size:clamp(28px,5vw,40px);font-weight:700;letter-spacing:-.01em}
+h2{font-size:19px;font-weight:700}
+h3{font-size:15px;font-weight:600}
+p{margin:0}
+a{color:var(--accent)}
+.mono{font-family:var(--f-mono);font-variant-numeric:tabular-nums}
+.eyebrow{font-family:var(--f-mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.muted{color:var(--muted)}
+.small{font-size:13px}
+
+header.top{display:flex;flex-direction:column;gap:10px}
+.banner{display:flex;flex-wrap:wrap;align-items:center;gap:12px 16px;background:var(--accent-tint);border:1px solid var(--accent);border-radius:6px;padding:12px 16px}
+.banner strong{font-weight:600}
+.btn{display:inline-flex;align-items:center;gap:6px;font:inherit;font-weight:600;font-size:14px;background:var(--accent);color:var(--accent-ink);border:1px solid var(--accent);border-radius:6px;padding:8px 14px;text-decoration:none;cursor:pointer}
+.btn.ghost{background:transparent;color:var(--accent)}
+.btn:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,summary:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+.btn.small{padding:5px 10px;font-size:13px}
+
+.row{display:flex;flex-wrap:wrap;gap:8px}
+.kids{display:flex;flex-direction:column;gap:8px}
+.kidrow{display:flex;flex-wrap:wrap;align-items:center;gap:8px 12px}
+.kidrow label{font-size:13px;font-weight:600;min-width:56px}
+.kidrow input{flex:1 1 160px;max-width:220px;width:auto}
+.panel>details.plain{border:0;padding:0;background:transparent}
+.panel>details.plain>summary{font-size:19px;font-weight:700}
+.panel>details.plain>.tbl-wrap{margin-top:12px}
+.more{border:0;background:transparent;padding:0}
+.more>summary{font-size:13px;font-weight:600;color:var(--accent)}
+.more[open]>summary{margin-bottom:4px}
+.more .ref{font-weight:400;margin-left:6px}
+.more .rules{margin-top:6px}
+.apply{display:flex;flex-direction:column;gap:8px}
+.phones{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:10px}
+.phone{display:flex;flex-direction:column;gap:2px;border:1px solid var(--line);border-radius:6px;background:var(--bg);padding:10px 14px}
+.phone .num{font-family:var(--f-mono);font-size:22px;font-weight:500;letter-spacing:.02em;font-variant-numeric:tabular-nums}
+.phone .lab{font-size:12.5px;color:var(--muted)}
+.hinweis{border:1px solid var(--warn);background:var(--warn-tint);color:var(--fg);border-radius:6px;padding:12px 16px}
+.chip-btn:disabled{opacity:.45;cursor:not-allowed}
+.chip-btn{font:inherit;font-size:13px;background:var(--surface);color:var(--fg);border:1px solid var(--line);border-radius:999px;padding:5px 12px;cursor:pointer}
+.chip-btn[aria-pressed="true"]{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
+.notice{font-size:13px;color:var(--muted)}
+
+.layout{display:grid;grid-template-columns:minmax(0,1fr);gap:20px;align-items:start}
+@media (min-width:960px){.layout{grid-template-columns:minmax(0,1fr) 340px}.result{position:sticky;top:16px}}
+.steps{display:flex;flex-direction:column;gap:16px;min-width:0}
+
+.step{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:18px;display:flex;flex-direction:column;gap:14px;min-width:0}
+.step-head{display:flex;flex-wrap:wrap;align-items:center;gap:10px}
+.step-head .no{font-family:var(--f-mono);font-size:13px;font-weight:500;color:var(--accent);border:1px solid var(--accent);border-radius:4px;padding:1px 7px}
+.step-head h2{flex:1 1 200px;min-width:0}
+.ref{font-family:var(--f-mono);font-size:12px;color:var(--muted)}
+.status{font-size:12px;font-weight:600;border-radius:999px;padding:2px 10px;border:1px solid var(--line);color:var(--muted)}
+.status.ok{background:var(--ok-tint);color:var(--ok);border-color:var(--ok)}
+.status.stop{background:var(--stop-tint);color:var(--stop);border-color:var(--stop)}
+.status.warn{background:var(--warn-tint);color:var(--warn);border-color:var(--warn)}
+
+.opts{display:flex;flex-direction:column;gap:8px}
+.opt{display:flex;gap:10px;align-items:flex-start;border:1px solid var(--line);border-radius:6px;padding:10px 12px;cursor:pointer}
+.opt:has(input:checked){border-color:var(--accent);background:var(--accent-tint)}
+.opt input{margin-top:4px;accent-color:var(--accent)}
+.opt small{display:block;color:var(--muted);font-size:13px}
+.fields{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}
+.field{display:flex;flex-direction:column;gap:5px;min-width:0}
+.field label{font-size:13px;font-weight:600}
+.field .hint{font-size:12px;color:var(--muted)}
+input[type=number],input[type=date],select{font:inherit;color:var(--fg);background:var(--bg);border:1px solid var(--line);border-radius:6px;padding:8px 10px;width:100%;min-width:0}
+.rules{margin:0;padding-left:18px;color:var(--muted);font-size:13px;display:flex;flex-direction:column;gap:3px}
+
+.months{display:grid;grid-template-columns:repeat(auto-fill,minmax(76px,1fr));gap:8px}
+.m{font:inherit;display:flex;flex-direction:column;gap:2px;align-items:center;border:1px dashed var(--line);border-radius:6px;background:var(--bg);color:var(--muted);padding:8px 4px;cursor:pointer}
+.m b{font-size:13px;color:var(--fg)}
+.m span{font-size:12px}
+.m[data-s="1"]{border:1px solid var(--accent);background:var(--accent-tint);color:var(--accent)}
+.m[data-s="2"]{border:1px solid var(--warn);background:var(--warn-tint);color:var(--warn)}
+.legend{display:flex;flex-wrap:wrap;gap:6px 16px;font-size:12px;color:var(--muted)}
+.bulk{display:flex;flex-wrap:wrap;gap:8px}
+
+.result{background:var(--surface);border:2px solid var(--fg);border-radius:8px;padding:18px;display:flex;flex-direction:column;gap:14px;min-width:0}
+.result .big{font-family:var(--f-mono);font-size:40px;font-weight:500;line-height:1;font-variant-numeric:tabular-nums}
+.result .verdict{font-weight:600}
+.verdict.ok{color:var(--ok)}.verdict.stop{color:var(--stop)}.verdict.warn{color:var(--warn)}
+.mgrid{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:4px}
+.mc{font-family:var(--f-mono);font-size:11px;text-align:center;border-radius:4px;padding:4px 0;border:1px solid var(--line);color:var(--muted)}
+.mc.y{background:var(--ok-tint);border-color:var(--ok);color:var(--ok)}
+.mc.n{background:var(--stop-tint);border-color:var(--stop);color:var(--stop)}
+.reasons,.hints{margin:0;padding-left:18px;font-size:13px;display:flex;flex-direction:column;gap:5px}
+.hints li{color:var(--warn)}
+.sum{font-size:13px;color:var(--muted);border-top:1px solid var(--line);padding-top:10px}
+
+.panel{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:18px;display:flex;flex-direction:column;gap:14px;min-width:0}
+.cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px}
+.cols>div{display:flex;flex-direction:column;gap:8px;min-width:0}
+.list{margin:0;padding-left:18px;display:flex;flex-direction:column;gap:5px}
+.check{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:8px}
+.check label{display:flex;gap:10px;align-items:flex-start;cursor:pointer}
+.check input{margin-top:4px;accent-color:var(--accent)}
+.path{font-family:var(--f-mono);font-size:12.5px;background:var(--bg);border:1px solid var(--line);border-radius:6px;padding:10px 12px;overflow-wrap:anywhere}
+.tbl-wrap{overflow-x:auto}
+table{border-collapse:collapse;width:100%;font-size:13.5px}
+th,td{text-align:left;border-bottom:1px solid var(--line);padding:7px 10px;vertical-align:top}
+th{font-size:12px;letter-spacing:.04em;text-transform:uppercase;color:var(--muted);font-weight:600}
+details{border:1px solid var(--line);border-radius:6px;padding:10px 12px;background:var(--bg)}
+summary{cursor:pointer;font-weight:600}
+details p,details ul{margin-top:8px;font-size:13.5px}
+footer{font-size:12.5px;color:var(--muted);display:flex;flex-direction:column;gap:4px}
+@media (prefers-reduced-motion:no-preference){.status,.chip-btn,.m{transition:background .15s,border-color .15s}}
+
+.lang{align-self:flex-end;display:flex;border:1px solid var(--line);border-radius:6px;overflow:hidden;background:var(--surface)}
+.lang a{padding:6px 14px;font-size:13px;font-weight:600;text-decoration:none;color:var(--fg)}
+.lang a[aria-current]{background:var(--accent);color:var(--accent-ink)}
+.lang a:focus-visible{outline:3px solid var(--accent);outline-offset:-3px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <nav class="lang" aria-label="Lingua"><a href="bonus-mamme-2026-de.html" hreflang="de" lang="de">Deutsch</a><a href="bonus-mamme-2026-it.html" hreflang="it" lang="it" aria-current="page">Italiano</a></nav>
+  <header class="top">
+    <div class="eyebrow">Aggiornato al 21/10/2026</div>
+    <h1>Nuovo bonus mamme 2026</h1>
+    <p class="muted">Verificare se il bonus spetta, per quanti mesi e come presentare la domanda.</p>
+    <div class="banner">
+      <span><strong>Domanda presentabile dal 21/10/2026.</strong> 60 euro al mese, massimo 12 mensilità, 720 euro in totale.</span>
+      <a class="btn" href="https://www.inps.it/it/it/dettaglio-scheda.it.schede-servizio-strumento.schede-servizi.nuovo-bonus-mamme-2026.html" target="_blank" rel="noopener">Portale INPS: Nuovo Bonus mamme 2026</a>
+    </div>
+    <div class="hinweis"><strong>Per qualsiasi domanda sulla pratica il patronato è a disposizione.</strong> Il datore di lavoro, purtroppo, non è il referente giusto.</div>
+  </header>
+
+  <div class="layout">
+    <div class="steps">
+
+      <section class="step" aria-labelledby="s1h">
+        <div class="step-head">
+          <span class="no">1</span><h2 id="s1h">Tipo di attività</h2>
+          <span class="status" id="st1">da compilare</span>
+        </div>
+        <div class="opts" role="radiogroup" aria-labelledby="s1h">
+          <label class="opt"><input type="radio" name="type" value="dip"><span>Lavoratrice dipendente<small>Pubblica o privata. Tempo determinato, indeterminato o apprendistato.</small></span></label>
+          <label class="opt"><input type="radio" name="type" value="aut"><span>Lavoratrice autonoma<small>Anche con cassa professionale o Gestione separata.</small></span></label>
+          <label class="opt"><input type="radio" name="type" value="dom"><span>Lavoratrice domestica<small>Nessun diritto.</small></span></label>
+        </div>
+      </section>
+
+      <section class="step" aria-labelledby="s2h">
+        <div class="step-head">
+          <span class="no">2</span><h2 id="s2h">Figli</h2>
+          <span class="status" id="st2">da compilare</span>
+        </div>
+        <p class="small muted">Inserire la data di nascita di ogni figlio. Contano anche i figli maggiorenni e quelli adottati o in affidamento preadottivo (data di ingresso in famiglia). Inserire anche le nascite del 2026. Non inserire i figli per i quali la responsabilità genitoriale è sospesa o decaduta.</p>
+        <div class="kids" id="kids"></div>
+        <div class="bulk"><button class="chip-btn" type="button" id="addKid">Aggiungi figlio</button></div>
+        <p class="small"><strong>Diritto:</strong> con due figli se il più piccolo ha meno di 10 anni. Con tre o più figli se il più piccolo ha meno di 18 anni.</p>
+      </section>
+
+      <section class="step" aria-labelledby="s3h">
+        <div class="step-head">
+          <span class="no">3</span><h2 id="s3h">Reddito, limite 40.000 euro</h2>
+          <span class="status" id="st3">da compilare</span>
+        </div>
+        <div class="fields">
+          <div class="field"><label for="gross">Reddito lordo presunto al 31/12/2026 (euro)</label><input type="number" id="gross" min="0" step="100" inputmode="decimal"><span class="hint">Da cedolino, prima delle imposte. Contano anche le quote esenti.</span></div>
+          <div class="field"><label for="subst">Indennità sostitutive del rapporto di lavoro (euro)</label><input type="number" id="subst" min="0" step="100" inputmode="decimal"><span class="hint">Ad es. maternità, malattia, congedo straordinario, integrazione salariale.</span></div>
+          <div class="field"><label for="contrib">Da dedurre: contributi INPS a carico del lavoratore (euro)</label><input type="number" id="contrib" min="0" step="100" inputmode="decimal"><span class="hint">Solo dipendenti. Non dedurre i contributi facoltativi.</span></div>
+        </div>
+        <p class="small" id="incomeOut"></p>
+        <p class="small muted">Non contano: NASpI, DIS-COLL e pensioni.</p>
+      </section>
+
+      <section class="step" aria-labelledby="s4h">
+        <div class="step-head">
+          <span class="no">4</span><h2 id="s4h">Mesi di attività nel 2026</h2>
+          <span class="status" id="st4">da compilare</span>
+        </div>
+        <p class="small muted">Toccare il mese finché compare lo stato giusto. Il mese iniziato conta per intero.</p>
+        <div class="months" id="monthGrid"></div>
+        <div class="legend"><span><b>assente</b> = nessun rapporto di lavoro</span><span><b>attivo</b> = tempo determinato o autonoma</span><span><b>indet.</b> = tempo indeterminato, anche apprendistato</span></div>
+        <div class="bulk mb">
+          <button class="chip-btn" type="button" data-fill="1">Tutti i mesi attivi</button>
+          <button class="chip-btn" type="button" data-fill="2" id="fillUnb">Tutti i mesi a tempo indeterminato</button>
+          <button class="chip-btn" type="button" data-fill="0">Svuota tutti</button>
+        </div>
+        <ul class="rules">
+          <li>Con tre o più figli il bonus non spetta nei mesi con contratto a tempo indeterminato, ma spetta l’esonero contributivo in busta paga.</li>
+          <li>Con due figli il tipo di contratto non conta.</li>
+        </ul>
+      </section>
+    </div>
+
+    <aside class="result" aria-live="polite" aria-labelledby="resh">
+      <div class="eyebrow" id="resh">Esito</div>
+      <div><div class="big" id="amount">0 €</div><div class="small muted" id="monthsTxt"></div></div>
+      <div class="verdict" id="verdict"></div>
+      <div class="hinweis" id="callout" hidden></div>
+      <div class="mgrid" id="mgrid"></div>
+      <ul class="reasons" id="reasons"></ul>
+      <ul class="hints" id="hints"></ul>
+      <p class="sum">Pagamento a dicembre 2026. Non imponibile, non rileva ai fini ISEE.</p>
+    </aside>
+  </div>
+
+  <section class="panel" aria-labelledby="ah">
+    <h2 id="ah">Presentare la domanda</h2>
+    <div class="apply">
+      <p><a class="btn" href="https://www.inps.it/it/it/dettaglio-scheda.it.schede-servizio-strumento.schede-servizi.nuovo-bonus-mamme-2026.html" target="_blank" rel="noopener">Portale INPS: Nuovo Bonus mamme 2026</a></p>
+      <p class="small"><strong>Online:</strong> accesso con identità digitale (ad es. SPID o CIE).</p>
+      <p class="small"><strong>Telefono</strong> (Contact Center INPS):</p>
+      <div class="phones">
+        <div class="phone"><span class="num">803 164</span><span class="lab">Da fisso, gratuito</span></div>
+        <div class="phone"><span class="num">06 164 164</span><span class="lab">Da cellulare, a pagamento</span></div>
+      </div>
+      <p class="small"><strong>Di persona:</strong> tramite patronato.</p>
+      <p><strong>Termine: <span class="mono">31/12/2026</span></strong></p>
+    </div>
+
+    <details class="more">
+      <summary>Cosa dichiara la richiedente nella domanda</summary>
+      <ul class="check">
+        <li><label><input type="checkbox"><span>Numero dei figli: due (il più piccolo con meno di 10 anni) o tre e più (il più piccolo con meno di 18 anni)</span></label></li>
+        <li><label><input type="checkbox"><span>Attività: dipendente o autonoma</span></label></li>
+        <li><label><input type="checkbox"><span>Con tre o più figli e rapporto dipendente: nessun contratto a tempo indeterminato nei mesi richiesti</span></label></li>
+        <li><label><input type="checkbox"><span>Reddito 2026 non superiore a 40.000 euro</span></label></li>
+        <li><label><input type="checkbox"><span>Per ogni figlio: dati, data di nascita, codice fiscale</span></label></li>
+        <li><label><input type="checkbox"><span>Pagamento: IBAN o bonifico domiciliato</span></label></li>
+        <li><label><input type="checkbox"><span>IBAN estero (area SEPA): allegare il modulo MV70</span></label></li>
+      </ul>
+      <p class="small">Le dichiarazioni sono rese sotto la propria responsabilità (D.P.R. 445/2000). Madre minorenne o incapace di agire: domanda presentata dal rappresentante legale.</p>
+    </details>
+    <details class="more">
+      <summary>Figlio senza codice fiscale: documenti</summary>
+      <ul class="list">
+        <li>Paese UE: certificazione anagrafica o documento pubblico</li>
+        <li>130 Stati contraenti della Convenzione dell’Aja: lo stesso, con apostille</li>
+        <li>Altri Stati terzi: lo stesso, legalizzato</li>
+        <li>I documenti devono provare la filiazione e l’esistenza in vita del figlio.</li>
+      </ul>
+    </details>
+    <details class="more">
+      <summary>Dopo la domanda</summary>
+      <ul class="list">
+        <li>L’INPS verifica in automatico. Esito: accoglimento, accoglimento parziale o rigetto.</li>
+        <li>In caso di rigetto o accoglimento parziale: richiesta di riesame, solo online, entro il termine indicato nel provvedimento.</li>
+        <li>Le dichiarazioni false comportano sanzioni e recupero delle somme.</li>
+      </ul>
+    </details>
+  </section>
+
+  <div class="hinweis"><strong>Per qualsiasi domanda sulla pratica il patronato è a disposizione.</strong> Il datore di lavoro, purtroppo, non è il referente giusto.</div>
+
+  <footer>
+    <span>Strumento di lavoro, bozza soggetta a verifica professionale. Casi particolari da verificare singolarmente.</span>
+  </footer>
+</div>
+
+<script>
+(function(){
+  var MONTHS=['Gen','Feb','Mar','Apr','Mag','Giu','Lug','Ago','Set','Ott','Nov','Dic'];
+  var LONG=['gennaio','febbraio','marzo','aprile','maggio','giugno','luglio','agosto','settembre','ottobre','novembre','dicembre'];
+  var S={type:'',kids:[''],gross:'',subst:'',contrib:'',m:[0,0,0,0,0,0,0,0,0,0,0,0]};
+  var $=function(id){return document.getElementById(id)};
+  function num(v){var x=parseFloat(v);return isNaN(x)?0:x}
+  function fmt(n){return n.toLocaleString('it-IT',{maximumFractionDigits:0})}
+  function ym(d){var p=d.split('-');return (+p[0])*12+(+p[1]);}
+
+  /* Mese (1..12) fino al quale la finestra anagrafica 2026 resta aperta. 0 = già chiusa, 12 = tutto l'anno. */
+  function limitMonth(d,years){
+    var p=d.split('-'),y=+p[0]+years,m=+p[1];
+    if(y<2026)return 0; if(y>2026)return 12; return m;
+  }
+  function ranges(arr){
+    if(!arr.length)return '';
+    var out=[],s=arr[0],p=arr[0];
+    for(var i=1;i<=arr.length;i++){
+      if(arr[i]!==p+1){out.push(s===p?MONTHS[s-1]:MONTHS[s-1]+'–'+MONTHS[p-1]);s=arr[i];}
+      p=arr[i];
+    }
+    return out.join(', ');
+  }
+
+  function compute(){
+    var blocked=(S.type==='dom');
+    var income=num(S.gross)+num(S.subst)-(S.type==='dip'?num(S.contrib):0);
+    var incomeKnown=S.gross!==''||S.subst!=='';
+    var dates=S.kids.filter(function(d){return d}).sort();
+    var res={rows:[],reasons:{},count:0,eson:[],noEson:false,kidsOk:0,aged:0,income:income,incomeKnown:incomeKnown,blocked:blocked,
+      emptyRow:S.kids.some(function(d){return !d}),haveDates:dates.length>0};
+    for(var m=1;m<=12;m++){
+      var cut=2026*12+m;
+      var present=dates.filter(function(d){return ym(d)<=cut});
+      var c=present.length,youngest=c?present[c-1]:null,r=[],kids=true;
+      if(blocked)r.push('Attività esclusa');
+      if(!S.type)r.push('Tipo di attività mancante');
+      if(c<2){kids=false;r.push('Meno di 2 figli');}
+      else{
+        var lim=c>=3?18:10;
+        if(m>limitMonth(youngest,lim)){kids=false;if(c>=3)res.aged++;r.push(c>=3?'Il figlio più piccolo ha 18 anni o più':'Il figlio più piccolo ha 10 anni o più');}
+      }
+      var act=S.m[m-1]>0;
+      if(!act)r.push('Nessun rapporto di lavoro');
+      var unb=false;
+      if(S.type==='dip'&&c>=3&&S.m[m-1]===2){unb=true;r.push('Contratto a tempo indeterminato con 3 o più figli');}
+      if(kids)res.kidsOk++;
+      if(unb&&kids)res.eson.push(m);
+      res.rows.push({m:m,ok:r.length===0,r:r});
+    }
+    if(S.type==='dip'&&res.aged===12)res.noEson=true;
+    res.over=incomeKnown&&income>40000;
+    res.rows.forEach(function(x){
+      if(res.over&&x.ok){x.ok=false;x.r.push('Reddito oltre 40.000 euro');}
+      if(x.ok)res.count++;
+      x.r.forEach(function(t){(res.reasons[t]=res.reasons[t]||[]).push(x.m);});
+    });
+    res.pristine=!res.haveDates&&!S.m.some(function(v){return v>0})&&!incomeKnown&&!S.type;
+    return res;
+  }
+
+  function setChip(id,kind,txt){var e=$(id);e.className='status'+(kind?' '+kind:'');e.textContent=txt;}
+
+  function render(){
+    var R=compute();
+    if(!S.type)setChip('st1','','da compilare');
+    else if(R.blocked)setChip('st1','stop','Nessun diritto');
+    else setChip('st1','ok','Possibile');
+    if(R.kidsOk>0)setChip('st2','ok',R.kidsOk+' mesi soddisfatti');
+    else if(!R.haveDates||R.emptyRow)setChip('st2','warn','Dati mancanti');
+    else setChip('st2','stop','Non soddisfatto');
+    if(!R.incomeKnown){setChip('st3','','da compilare');$('incomeOut').textContent='';}
+    else if(R.over){setChip('st3','stop','Oltre 40.000 euro');$('incomeOut').textContent='Reddito rilevante: '+fmt(R.income)+' euro. È oltre il limite.';}
+    else{setChip('st3','ok','Sotto il limite');$('incomeOut').textContent='Reddito rilevante: '+fmt(R.income)+' euro. È sotto il limite di 40.000 euro.';}
+    var nAct=S.m.filter(function(v){return v>0}).length;
+    if(!nAct)setChip('st4','warn','Nessun mese');else setChip('st4','ok',nAct+' mesi attivi');
+
+    var cnt=Math.min(R.count,12);
+    $('amount').textContent=fmt(cnt*60)+' €';
+    $('monthsTxt').textContent=cnt+' mensilità su 12 · 60 euro al mese · massimo 720 euro';
+    var v=$('verdict');
+    if(R.pristine){v.className='verdict';v.textContent='Ancora nessun dato. Compilare i passaggi da 1 a 4.';}
+    else if(cnt>0){v.className='verdict ok';v.textContent='Diritto presumibilmente sussistente';}
+    else{
+      var miss=[];
+      if(!S.type)miss.push('tipo di attività (1)');
+      if(!R.haveDates||R.emptyRow)miss.push('data di nascita di tutti i figli (2)');
+      if(!nAct)miss.push('mesi di attività (4)');
+      if(miss.length){v.className='verdict warn';v.textContent='Da compilare ancora: '+miss.join(', ')+'.';}
+      else{v.className='verdict stop';v.textContent='Nessun diritto';}
+    }
+    $('mgrid').innerHTML=R.rows.map(function(x){
+      if(R.pristine)return '<div class="mc">'+MONTHS[x.m-1]+'<br>·</div>';
+      return '<div class="mc '+(x.ok?'y':'n')+'" title="'+LONG[x.m-1]+': '+(x.ok?'diritto':x.r.join('; '))+'">'+MONTHS[x.m-1]+'<br>'+(x.ok?'✓':'✕')+'</div>';
+    }).join('');
+    $('reasons').innerHTML=R.pristine?'':Object.keys(R.reasons).map(function(k){return '<li><strong>'+ranges(R.reasons[k])+':</strong> '+k+'</li>'}).join('');
+    var h=[];
+    var cb=$('callout');
+    if(R.eson.length){
+      cb.hidden=false;
+      cb.innerHTML='<strong>Nessun bonus mamme per '+ranges(R.eson)+': verificare l’esonero contributivo in busta paga</strong><br>'+
+        'Con tre o più figli e contratto a tempo indeterminato il bonus non spetta. Spetta invece l’esonero dei contributi INPS a carico della lavoratrice, fino a 250 euro al mese (3.000 euro all’anno), fino al 31/12/2026. '+
+        'Questa agevolazione viene applicata direttamente tramite la busta paga. Verificare in busta paga che l’esonero sia stato applicato.';
+    }else{cb.hidden=true;cb.innerHTML='';}
+    if(R.noEson)h.push('Né bonus né esonero: il figlio più piccolo ha già 18 anni o più.');
+    $('hints').innerHTML=h.map(function(t){return '<li>'+t+'</li>'}).join('');
+    $('fillUnb').hidden=S.type!=='dip';
+  }
+
+  function drawMonths(){
+    $('monthGrid').innerHTML=MONTHS.map(function(n,i){
+      var s=S.m[i],t=s===0?'assente':(s===1?'attivo':'indet.');
+      return '<button type="button" class="m" data-i="'+i+'" data-s="'+s+'" aria-label="'+LONG[i]+': '+t+'"><b>'+n+'</b><span>'+t+'</span></button>';
+    }).join('');
+  }
+  function drawKids(){
+    $('kids').innerHTML=S.kids.map(function(d,i){
+      return '<div class="kidrow"><label for="k'+i+'">Figlio '+(i+1)+'</label><input type="date" id="k'+i+'" data-i="'+i+'" value="'+d+'">'+
+        '<button type="button" class="chip-btn rm" data-i="'+i+'" aria-label="Rimuovi figlio '+(i+1)+'"'+(S.kids.length<2?' disabled':'')+'>Rimuovi</button></div>';
+    }).join('');
+    $('addKid').disabled=S.kids.length>=8;
+  }
+
+  document.querySelectorAll('input[name=type]').forEach(function(r){r.addEventListener('change',function(){
+    S.type=r.value;
+    if(S.type!=='dip')S.m=S.m.map(function(x){return x>0?1:0});
+    drawMonths();render();
+  });});
+  ['gross','subst','contrib'].forEach(function(k){$(k).addEventListener('input',function(){S[k]=this.value;render();});});
+  $('kids').addEventListener('input',function(e){
+    var t=e.target;if(t.type!=='date')return;
+    S.kids[+t.dataset.i]=t.value;render();
+  });
+  $('kids').addEventListener('click',function(e){
+    var b=e.target.closest('.rm');if(!b||b.disabled)return;
+    S.kids.splice(+b.dataset.i,1);drawKids();render();
+  });
+  $('addKid').addEventListener('click',function(){
+    if(S.kids.length>=8)return;
+    S.kids.push('');drawKids();render();
+    var el=$('k'+(S.kids.length-1));if(el)el.focus();
+  });
+  $('monthGrid').addEventListener('click',function(e){
+    var b=e.target.closest('.m');if(!b)return;
+    var i=+b.dataset.i,max=S.type==='dip'?2:1;
+    S.m[i]=(S.m[i]+1)>max?0:S.m[i]+1;
+    drawMonths();render();
+    var nb=document.querySelector('.m[data-i="'+i+'"]');if(nb)nb.focus();
+  });
+  document.querySelector('.bulk.mb').addEventListener('click',function(e){
+    var b=e.target.closest('button');if(!b)return;
+    var f=+b.dataset.fill;S.m=S.m.map(function(){return f});
+    drawMonths();render();
+  });
+
+  drawKids();drawMonths();render();
+})();
+
+</script>
+</body>
+</html>
